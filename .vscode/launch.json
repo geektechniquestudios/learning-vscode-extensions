@@ -17,7 +17,6 @@
 			"request": "launch",
 			"type": "pwa-extensionHost"
 		},
-		
 		{
 			"name": "Run Extension",
 			"type": "extensionHost",
