@@ -8,7 +8,7 @@
 			"script": "watch",
 			"problemMatcher": [
                 "$ts-webpack-watch",
-                "$tslint-webpack-watch"
+				"$tslint-webpack-watch",
 			],
 			"isBackground": true,
 			"presentation": {
