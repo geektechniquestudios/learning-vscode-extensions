@@ -125,7 +125,7 @@ export class HelloWorldPanel {
   private _getHtmlForWebview(webview: vscode.Webview) {
     // // And the uri we use to load this script in the webview
     const scriptUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this._extensionUri, "out", "main.js")
+      vscode.Uri.joinPath(this._extensionUri, "out/compiled", "HelloWorld.js")
     )
 
     // // Local path to css styles
@@ -173,11 +173,11 @@ export class HelloWorldPanel {
         </script>
 			</head>
       <body>
-        <h1>It'd be nice if this worked</h1> 
-        <p>testing testing</p> 
-        <input/>
-        <button> yah </button>
-			</body>
+
+      </body>
+      
+      <script src="${scriptUri}" nonce="${nonce}"/>
+
 			</html>`
   }
 }
