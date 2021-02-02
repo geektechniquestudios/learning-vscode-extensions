@@ -12,10 +12,31 @@
   "activationEvents": [
     "onCommand:daily-deploy.helloWorld",
     "onCommand:daily-deploy.askQuestion",
-    "onCommand:daily-deploy.refresh"
+    "onCommand:daily-deploy.refresh",
+    "onView:daily-deploy-sidebar"
   ],
   "main": "./dist/extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "daily-deploy-sidebar-view",
+          "title": "DailyDeploy",
+          "icon": "media/checklist.svg"
+        }
+      ]
+    },
+    "views": {
+      "vsinder-sidebar-view": [
+        {
+          "type": "webview",
+          "id": "daily-deploy-sidebar",
+          "name": "DailyDeploy",
+          "icon": "media/checklist.svg",
+          "contextualTitle": "DailyDeploy"
+        }
+      ]
+    },
     "commands": [
       {
         "command": "daily-deploy.helloWorld",
